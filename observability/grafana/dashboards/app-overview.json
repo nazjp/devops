@@ -1,0 +1,41 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "graphTooltip": 0,
+  "panels": [
+    {
+      "datasource": { "type": "prometheus", "uid": "Prometheus" },
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+      "id": 1,
+      "targets": [
+        {
+          "expr": "up{job=\"app\"}",
+          "legendFormat": "app up"
+        }
+      ],
+      "title": "App availability",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "prometheus", "uid": "Prometheus" },
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+      "id": 2,
+      "targets": [
+        {
+          "expr": "scrape_duration_seconds{job=\"app\"}",
+          "legendFormat": "scrape duration"
+        }
+      ],
+      "title": "Scrape latency",
+      "type": "timeseries"
+    }
+  ],
+  "schemaVersion": 39,
+  "tags": ["nazjp", "template"],
+  "time": { "from": "now-1h", "to": "now" },
+  "title": "App Overview",
+  "uid": "nazjp-app-overview",
+  "version": 1
+}

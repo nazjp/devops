@@ -1,0 +1,34 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+
+namePrefix: prod-
+
+replicas:
+  - name: app
+    count: 3
+
+images:
+  - name: ghcr.io/example/app
+    newTag: latest
+
+patches:
+  - target:
+      kind: Ingress
+      name: app
+    patch: |
+      - op: replace
+        path: /spec/rules/0/host
+        value: app.example.com
+  - target:
+      kind: Deployment
+      name: app
+    patch: |
+      - op: replace
+        path: /spec/template/spec/containers/0/resources/limits/cpu
+        value: 500m
+      - op: replace
+        path: /spec/template/spec/containers/0/resources/limits/memory
+        value: 256Mi
