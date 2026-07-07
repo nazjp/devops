@@ -67,7 +67,7 @@ Feedback in seconds, not minutes. Developers fix issues before pushing — fewer
 
 **Why these specific hooks?**
 
-They map directly to the other templates: YAML for [cicd](../cicd/) and [k8s](../k8s/), Hadolint for [docker](../docker/), Terraform hooks for [terraform](../terraform/).
+They map directly to the other templates: YAML for [cicd](https://github.com/nazjp/cicd) and [k8s](../k8s/), Hadolint for [docker](../docker/), Terraform hooks for [terraform](../terraform/).
 
 **Why `hadolint-docker`?**
 
@@ -90,7 +90,7 @@ GitHub Actions and Kustomize YAML can be long. `line-length: 120` avoids fightin
     - id: eslint
 ```
 
-**Run in CI as a safety net** — add to [cicd](../cicd/):
+**Run in CI as a safety net** — add to [cicd](https://github.com/nazjp/cicd):
 
 ```yaml
 - name: Pre-commit

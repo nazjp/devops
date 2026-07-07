@@ -101,7 +101,7 @@ Local state is fine for solo experiments. Teams should use S3 + DynamoDB locking
 
 ## CI integration
 
-Pair with the [cicd](../cicd/) template. Example deploy step:
+Pair with the [cicd](https://github.com/nazjp/cicd) template. Example deploy step:
 
 ```yaml
 - name: Terraform plan

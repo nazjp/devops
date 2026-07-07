@@ -2,7 +2,7 @@
 
 Kustomize-based manifests with a shared **base** and environment **overlays** for staging and production. Includes security defaults, health probes, and resource limits.
 
-Designed to pair with the [docker](../docker/) image and [cicd](../cicd/) deploy workflow.
+Designed to pair with the [docker](../docker/) image and [cicd](https://github.com/nazjp/cicd) deploy workflow.
 
 ---
 
@@ -97,7 +97,7 @@ Kubernetes only routes traffic after `/health` succeeds. Unhealthy pods get rest
 
 ## CI integration
 
-From the [cicd](../cicd/) deploy workflow:
+From the [cicd](https://github.com/nazjp/cicd) deploy workflow:
 
 ```yaml
 - name: Deploy

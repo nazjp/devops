@@ -93,7 +93,7 @@ Small base image. For glibc-specific binaries, switch to `node:22-bookworm-slim`
 env_file: .env
 ```
 
-**Push to a registry** — pair with the [cicd](../cicd/) template:
+**Push to a registry** — pair with the [cicd](https://github.com/nazjp/cicd) template:
 
 ```yaml
 - name: Build and push

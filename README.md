@@ -10,7 +10,7 @@ Use them individually or combine them into a full delivery pipeline.
 
 | Project | What it solves |
 |---------|----------------|
-| [**cicd**](cicd/) | Split CI and deploy workflows with branch-based concurrency |
+| [**cicd**](https://github.com/nazjp/cicd) | Split CI and deploy workflows with branch-based concurrency |
 | [**docker**](docker/) | Multi-stage builds, non-root runtime, local dev with Compose |
 | [**terraform**](terraform/) | Environment-scoped IaC with reusable modules |
 | [**k8s**](k8s/) | Kustomize base + overlays for staging and production |
